@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+feh --bg-fill "$1"

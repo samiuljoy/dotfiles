@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+# System poweroff/reboot
+#read -p "[o]ff or [r]eboot? " off
+#case "$off" in
+#	o|off|s ) sync && sleep 2 && systemctl poweroff
+#		;;
+#	r|reboot ) sync && sleep 2 && systemctl reboot
+#		;;
+#	"" ) sync && sleep 2 && systemctl poweroff
+#		;;
+#	* ) echo "wrong input"
+#		exit 1
+#		;;
+#esac
+sync && sleep 2 && systemctl reboot

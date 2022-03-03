@@ -1,0 +1,7 @@
+#!/bin/sh
+val="$(fzf)"
+if [ $? = 0 ]; then
+	xdg-open "$val"
+else
+	exit 130
+fi

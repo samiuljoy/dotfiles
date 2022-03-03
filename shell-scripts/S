@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+# start the X server from the tty console
+if [ -z "$DISPLAY" ]; then
+	/usr/bin/startx
+else
+	echo "Display server already running"
+	echo "exiting"
+	exit 1
+fi

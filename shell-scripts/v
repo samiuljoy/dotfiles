@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+val="$(fzf)"
+case "$?" in
+	0 ) vim $val
+	;;
+	* ) exit 1
+	;;
+esac

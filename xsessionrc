@@ -1,0 +1,5 @@
+xset b off s off -dpms r rate 170 50
+xmodmap $HOME/.Xmodmap
+#xsetroot -name "$(date +%A', '%B' '%e', '%Y'  ')"
+#feh --bg-fill $HOME/Pictures/4walllllll.png
+ssh-agent dwm

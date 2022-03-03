@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+# do package query for apt packages
+case "$1" in
+	-e ) case "$2" in
+		"" ) echo "no package name provided"
+		exit 1
+		;;
+		* ) apt-cache search $2 | awk '{ print $1 }' | grep $2
+			case "$?" in
+				"0" ) return 0
+					;;
+				* ) echo "no package with that name found"
+					exit 1
+					;;
+			esac
+			;;
+	esac
+	;;
+	"" ) echo "pass -e for exact match or just the package name as first argument"
+		exit 1
+		;;
+	* ) apt-cache search $1
+		;;
+esac

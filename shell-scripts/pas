@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+# paste onto terminal from clipboard
+
+if [ -z "$DISPLAY" ]; then
+	echo "No display server running"
+	exit 1
+else
+	xsel -ob
+fi

@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+# zathura for easy file opening
+filename="$1"
+
+# empty filename check
+[ "$filename" = "" ] && echo "pass a filename as first argument" && exit 1
+
+if [ -f "$PWD/$filename" ]; then
+	zathura "$filename"
+else
+	echo "filename does not exist"
+	exit 1
+fi

@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+[ -f "$1" ] && sed 's/^\(.*\)/\t\t\t\t\t\1/g' $1 | less || echo "$1 not found"
